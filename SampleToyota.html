@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP in HTML/JavaScript</title>
+</head>
+<body>
+
+    <h1>OOP in JavaScript</h1>
+    <p>Check the console log or the output below:</p>
+    <div id="output"></div>
+
+    <script>
+        // Define a class (Equivalent to 'class Car' in C++)
+        class Car {
+            constructor(brand, year) {
+                this.brand = brand;
+                this.year = year;
+            }
+
+            // Method to display car details
+            displayInfo() {
+                return `Brand: ${this.brand}, Year: ${this.year}`;
+            }
+        }
+
+        // Create an object of the Car class (Equivalent to 'Car myCar' in C++)
+        const myCar = new Car("Toyota", 2022);
+
+        // Print the result to the console
+        console.log(myCar.displayInfo());
+
+        // Display the result directly on the web page
+        document.getElementById("output").innerText = myCar.displayInfo();
+    </script>
+
+</body>
+</html>
